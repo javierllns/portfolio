@@ -1,0 +1,21 @@
+.mainContainer {
+  background-color: blueviolet;
+  height: 100%;
+  width: 320px;
+}
+
+/* for medium resolutions */
+@media only screen and (min-width: 700px) and (max-width: 1280px) {
+  .mainContainer {
+    position: absolute;
+    width: 30%;
+  }
+}
+
+/* for small resolutions */
+@media only screen and (max-width: 700px) {
+  .mainContainer {
+    position: absolute;
+    width: 80%;
+  }
+}

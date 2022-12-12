@@ -1,10 +1,11 @@
-import { Outlet } from "react-router-dom";
 import styles from "./Layout.module.css";
+import { Outlet } from "react-router-dom";
+import { Sidebar } from "../../components";
 
 export const MainLayout = () => {
   return (
     <div className={styles.mainContainer}>
-      <div style={{ height: "100vh", width: "200px", backgroundColor: "red" }}>Main layout</div>
+      <Sidebar />
       <div className={styles.content}>
         <Outlet />
       </div>

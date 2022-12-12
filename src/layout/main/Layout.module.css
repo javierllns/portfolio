@@ -1,7 +1,11 @@
 .mainContainer {
   background-color: rgb(148, 165, 165);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
 }
 
 .content {
+  width: 100%;
   background-color: brown;
 }
