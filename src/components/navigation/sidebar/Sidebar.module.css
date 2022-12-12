@@ -1,11 +1,10 @@
 .mainContainer {
-  background: rgb(186 0 0 / 85%);
-  /*background: rgba(235, 235, 235, 0.85);*/
+  background: rgb(186 0 0 / 85%); /*background: rgba(235, 235, 235, 0.85);*/
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  /*-*/
+
   height: calc(100% - 2px);
   width: 320px;
   display: grid;
@@ -13,14 +12,14 @@
   grid-template-rows: 0.1fr 0.8fr 0.05fr 0.2fr 0.05fr 0.3fr 0.1fr 2.2fr 0.8fr 0.2fr;
 } /*                    1    2    3     4     5    6      7    8*/
 
-/* for medium resolutions */
+/* medium resolutions */
 @media only screen and (min-width: 700px) and (max-width: 1280px) {
   .mainContainer {
     position: absolute;
     width: 30%;
   }
 }
-/* for small resolutions */
+/* small resolutions */
 @media only screen and (max-width: 700px) {
   .mainContainer {
     position: absolute;
@@ -30,17 +29,16 @@
 
 .profilePicture {
   background-color: aqua;
-  /*-*/
+
   grid-area: 2 / 2 / 3 / 3;
 }
 
 .profileName {
   background-color: rgb(255, 204, 0);
   color: rgb(57, 57, 58);
-  font-family: Quicksand, sans-serif;
   font-size: 20px;
-  font-weight: normal;
-  /*-*/
+  font-weight: 500;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,12 +47,12 @@
 
 .socialLinks {
   background-color: rgb(102, 255, 0);
-  /*-*/
+
   grid-area: 6 / 2 / 7 / 3;
 }
 
 .siteNavigation {
   background-color: rgba(197, 124, 217, 0.813);
-  /*-*/
+
   grid-area: 8 / 2 / 9 / 3;
 }
