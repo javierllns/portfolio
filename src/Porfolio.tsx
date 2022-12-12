@@ -1,7 +1,8 @@
 import "./Portfolio.css";
+import { MainRouterProvider } from "./routes";
 
 function Porfolio() {
-  return <div className="porfolio">Hola</div>;
+  return <MainRouterProvider />;
 }
 
 export default Porfolio;
