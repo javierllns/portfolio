@@ -1,6 +1,6 @@
 /* Main container */
 .mainContainer {
-  background: rgba(157, 207, 209, 0.357);
+  background: rgba(157, 207, 209, 0.671);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
@@ -11,9 +11,9 @@
   display: grid;
   grid-template-columns: 0.2fr 1fr 0.2fr;
   grid-template-rows: 0.1fr 0.8fr 0.05fr 0.2fr 0.05fr 0.3fr 0.1fr 2.2fr 0.8fr 0.2fr;
-
-  transition: width 0.2s ease-out;
-} /*                    1    2    3     4     5    6      7    8*/
+  /*                     1     2      3     4      5     6     7     8     9     10*/
+  transition: width 0.13s ease-out;
+}
 
 /* Other components */
 .toggleShowSidebar {
@@ -40,7 +40,6 @@
 }
 
 .profileName {
-  background-color: rgb(255, 204, 0);
   color: rgb(57, 57, 58);
   font-size: 20px;
   font-weight: 500;
@@ -79,7 +78,7 @@
   }
   .collapseMainContainer {
     width: 0px;
-    transition: width 0.2s ease-out;
+    transition: width 0.13s ease-out;
   }
 }
 /* small */
@@ -90,6 +89,6 @@
   }
   .collapseMainContainer {
     width: 0px;
-    transition: width 0.2s ease-out;
+    transition: width 0.13s ease-out;
   }
 }
