@@ -1,5 +1,6 @@
+/* Main container */
 .mainContainer {
-  background: rgb(186 0 0 / 85%); /*background: rgba(235, 235, 235, 0.85);*/
+  background: rgba(157, 207, 209, 0.357);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
@@ -10,34 +11,25 @@
   display: grid;
   grid-template-columns: 0.2fr 1fr 0.2fr;
   grid-template-rows: 0.1fr 0.8fr 0.05fr 0.2fr 0.05fr 0.3fr 0.1fr 2.2fr 0.8fr 0.2fr;
+
+  transition: width 0.2s ease-out;
 } /*                    1    2    3     4     5    6      7    8*/
 
-.collapseMainContainer {
-  width: 0px;
-  max-width: 0px;
-}
-
-/* medium resolutions */
-@media only screen and (min-width: 700px) and (max-width: 1280px) {
-  .mainContainer {
-    position: absolute;
-    width: 30%;
-  }
-}
-/* small resolutions */
-@media only screen and (max-width: 700px) {
-  .mainContainer {
-    position: absolute;
-    width: 80%;
-  }
-}
-
-.togleShowSidebar {
+/* Other components */
+.toggleShowSidebar {
   background-color: rgb(81, 0, 255);
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.toggleShowSidebarWrapper {
+  display: flex;
+  flex-direction: row-reverse;
   grid-area: 1 / 3 / 2 / 4;
 }
 
@@ -52,6 +44,7 @@
   color: rgb(57, 57, 58);
   font-size: 20px;
   font-weight: 500;
+  white-space: nowrap;
 
   overflow: hidden;
   display: flex;
@@ -70,4 +63,33 @@
   background-color: rgba(197, 124, 217, 0.813);
 
   grid-area: 8 / 2 / 9 / 3;
+}
+
+/* large */
+@media only screen and (min-width: 1280px) {
+  .toggleShowSidebar {
+    display: none;
+  }
+}
+/* medium */
+@media only screen and (min-width: 700px) and (max-width: 1280px) {
+  .mainContainer {
+    position: absolute;
+    width: 30%;
+  }
+  .collapseMainContainer {
+    width: 0px;
+    transition: width 0.2s ease-out;
+  }
+}
+/* small */
+@media only screen and (max-width: 700px) {
+  .mainContainer {
+    position: absolute;
+    width: 80%;
+  }
+  .collapseMainContainer {
+    width: 0px;
+    transition: width 0.2s ease-out;
+  }
 }

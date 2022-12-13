@@ -3,22 +3,26 @@ import { useClassNames, useListenWindowResize } from "../../../hooks";
 import styles from "./Sidebar.module.css";
 
 export const Sidebar = () => {
-  const SidebarClasses = useClassNames(styles);
+  const classes = useClassNames(styles);
   const { width: viewportWidth } = useListenWindowResize();
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const handleToggleSidebar = () => {
     setShowSidebar((prev) => !prev);
   };
 
   useEffect(() => {
-    viewportWidth && viewportWidth > 1280 && setShowSidebar(true);
+    if (viewportWidth && viewportWidth > 1280) {
+      setShowSidebar(true);
+    }
   }, [viewportWidth]);
 
   return (
-    <div className={SidebarClasses({ mainContainer: true, collapseMainContainer: !showSidebar })}>
-      <div className={styles.togleShowSidebar} onClick={handleToggleSidebar}>
-        X
+    <div className={classes({ mainContainer: true, collapseMainContainer: !showSidebar })}>
+      <div className={styles.toggleShowSidebarWrapper}>
+        <div className={styles.toggleShowSidebar} onClick={handleToggleSidebar}>
+          X
+        </div>
       </div>
       <div className={styles.profilePicture}></div>
       <div className={styles.profileName}>Javier Llanos</div>
